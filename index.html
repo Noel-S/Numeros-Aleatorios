@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Números aleatorios</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+	    <div class="py-5 text-center">
+	        <br>
+	        <h2>Generación de números aleatorios</h2>
+	        <p class="lead">Este método Utiliza la función trigonométrica del Coseno aprovechando que es una función tracendente para la gneracion de números aleatorios, tomando semilla de 4 digitos, ésta se toma como ángulo para evaluarla en el Coseno, al resultado se convierte en valor absoluto al estar el domminio de la función entre -1 y 1, a este resultado se extraen 4 digitos iniciando desde el 4to decimal hasta el 8vo para la nueva semilla esta se divide entre 10000 para así obtener el numero aleatorio.</p>
+	    </div>
+
+	    <div class="row justify-content-md-center">
+	        <div class="col-md-8">
+	        	<div class="row">
+		            <div class="col-sm mb-3">
+		                <label for="lastName">Semilla</label>
+		                <input type="number" id="seed" min="0" step="1" data-bind="value:replyNumber" class="form-control" required>
+		            </div>
+
+		            <div class="col-sm mb-3">
+		                <label for="lastName">Total de números aleatorios</label>
+		                <input type="number" id="NA" min="0" step="1" data-bind="value:replyNumber" class="form-control" required>
+		            </div>
+	          	</div>
+		        <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="validarCampos();">Continuar</button>
+	        </div>
+	    </div>
+	    <br>
+	    <div class="row">
+	    	<table class="table" id="tabla">
+			  	<thead class="success">
+				    <tr>
+				      <th>#</th>
+				      <th>Semilla</th>
+				      <th>| Cos(Semilla) |</th>
+				      <th>Nueva semilla</th>
+				      <th>Número Aleatorio</th>
+				    </tr>
+			  	</thead>
+			  	<tbody id="tbody">
+				    
+			  	</tbody>
+			</table>
+	    </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+  <footer class="page-footer blue center-on-small-only">
+    <div class="footer-copyright">
+        <div class="container-fluid">
+        	<a class="btn btn-primary" href="js/main.js">Código</a>
+        </div>
+    </div>
+</footer>
+</html>
